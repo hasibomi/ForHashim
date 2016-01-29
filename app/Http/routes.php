@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    $robot = new \App\Libraries\UptimeRobot('m777393915-b870b4f5c2344e73d3c246b2');
+    $getMonitors = simplexml_load_string($robot->getMonitors());
+    //$getMonitors = $robot->getMonitors();
+
+    foreach($getMonitors->monitor as $monitor)
+    {
+        echo $monitor['status'];
+    }
 });
 
 /*
