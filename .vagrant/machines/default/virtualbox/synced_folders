@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/app":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/app","hostpath":"/Users/hasibomi1/Documents/Development/Apps/Upwork/Hashim/App","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/hasibomi1/Documents/Development/Apps/Upwork/Hashim/App","disabled":false}}}
