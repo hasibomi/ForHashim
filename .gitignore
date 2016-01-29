@@ -5,3 +5,5 @@ Homestead.json
 .env
 _ide_helper.php
 Vagrantfile
+.idea
+.vagrant
