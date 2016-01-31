@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Event;
+use App\Record;
 use Illuminate\Console\Command;
 use App\Libraries\UptimeRobot;
 use Illuminate\Console\Scheduling\Schedule;
@@ -37,8 +38,9 @@ class MonitorStatus extends Command
      *
      * @param Schedule $schedule
      * @param Event $event
+     * @param Record $record
      */
-    public function handle(Schedule $schedule, Event $event)
+    public function handle(Schedule $schedule, Event $event, Record $record)
     {
         $uptimeRobot = new UptimeRobot(env('UPTIMEROBOT_API'));
         $getMonitors = simplexml_load_string($uptimeRobot->getMonitors());
@@ -47,10 +49,20 @@ class MonitorStatus extends Command
         {
             if($monitor['status'] == 9)
             {
-                // Check for latest restart record.
-                $check = $event->where('event', 'restart');
+                // Record the restart
+                $event->create([
+                    'machine_name' => 'ubuntu-512mb-sgp1-01',
+                    'event' => 'restart'
+                ]);
 
-                if($check->count() > 0)
+
+                // Check for the restart signal.
+                $check = $event->where('event', 'restart');
+                // Check for the record of recent restart
+                $recentRestart = $record->where('event', 'restart');
+
+                // If there is a recent record but no signal found
+                if($recentRestart->count() > 0 && $check->count() < 6)
                 {
                     \Mail::send('Email.Down', [], function($message)
                     {
@@ -59,12 +71,6 @@ class MonitorStatus extends Command
                 }
                 else
                 {
-                    // Record the restart
-                    $event->create([
-                        'machine_name' => 'ubuntu-512mb-sgp1-01',
-                        'event' => 'restart'
-                    ]);
-
                     if($schedule->exec('envoy run monitorStatus'))
                     {
                         \Log::info('Envoy ran @ ' . \Carbon\Carbon::now());
@@ -72,11 +78,16 @@ class MonitorStatus extends Command
                         {
                             $message->to('hashimalhadad@gmail.com', 'Hashim Ibrahim')->subject('About your server');
                         });
+
+                        // Save this restart to db
+                        $record->create(['event' => 'restart']);
                     }
                     else
                     {
                         \Log::info('Envoy is not working @ ' . \Carbon\Carbon::now());
                     }
+
+                    $check->delete();
                 }
             }
             else
