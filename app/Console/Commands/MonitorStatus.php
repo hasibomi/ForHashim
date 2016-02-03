@@ -47,6 +47,9 @@ class MonitorStatus extends Command
 
         foreach($getMonitors->monitor as $monitor)
         {
+            // Check for the restart signal.
+            $check = $event->where('event', 'restart');
+
             if($monitor['status'] == 9)
             {
                 // Record the restart
@@ -55,9 +58,6 @@ class MonitorStatus extends Command
                     'event' => 'restart'
                 ]);
 
-
-                // Check for the restart signal.
-                $check = $event->where('event', 'restart');
                 // Check for the record of recent restart
                 $recentRestart = $record->where('event', 'restart');
 
@@ -71,20 +71,26 @@ class MonitorStatus extends Command
                 }
                 else
                 {
-                    if($schedule->exec('envoy run monitorStatus'))
-                    {
-                        \Log::info('Envoy ran @ ' . \Carbon\Carbon::now());
-                        \Mail::send('Email.Server', ['time' => \Carbon\Carbon::now()], function($message)
-                        {
-                            $message->to('hashimalhadad@gmail.com', 'Hashim Ibrahim')->subject('About your server');
-                        });
+                    // 4 hours have been passed.
+                    $hoursPassed = $check->where('created_at', '<', 'DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 4 HOUR)');
 
-                        // Save this restart to db
-                        $record->create(['event' => 'restart']);
-                    }
-                    else
+                    if($hoursPassed->count() > 0)
                     {
-                        \Log::info('Envoy is not working @ ' . \Carbon\Carbon::now());
+                        if($schedule->exec('envoy run monitorStatus'))
+                        {
+                            \Log::info('Envoy ran @ ' . \Carbon\Carbon::now());
+                            \Mail::send('Email.Server', ['time' => \Carbon\Carbon::now()], function($message)
+                            {
+                                $message->to('hashimalhadad@gmail.com', 'Hashim Ibrahim')->subject('About your server');
+                            });
+
+                            // Save this restart to db
+                            $record->create(['event' => 'restart']);
+                        }
+                        else
+                        {
+                            \Log::info('Envoy is not working @ ' . \Carbon\Carbon::now());
+                        }
                     }
 
                     $check->delete();
@@ -92,6 +98,7 @@ class MonitorStatus extends Command
             }
             else
             {
+                $check->delete();
                 \Log::info('Monitor status is good @ ' . \Carbon\Carbon::now());
             }
         }

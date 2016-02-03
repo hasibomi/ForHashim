@@ -1,0 +1,1186 @@
+[2016-01-29 22:20:04] local.INFO: Envoy ran @ 2016-01-29 22:20:04  
+[2016-01-29 22:25:03] local.INFO: Envoy ran @ 2016-01-29 22:25:03  
+[2016-01-29 22:30:01] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '}' in /home/vagrant/app/app/Console/Commands/MonitorStatus.php:62
+Stack trace:
+#0 /home/vagrant/app/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/home/vagrant/a...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Console\\Com...')
+#2 [internal function]: spl_autoload_call('App\\Console\\Com...')
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(738): ReflectionClass->__construct('App\\Console\\Com...')
+#4 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(633): Illuminate\Container\Container->build('App\\Console\\Com...', Array)
+#5 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(674): Illuminate\Container\Container->make('App\\Console\\Com...', Array)
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Application.php(115): Illuminate\Foundation\Application->make('App\\Console\\Com...')
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Application.php(129): Illuminate\Console\Application->resolve('App\\Console\\Com...')
+#8 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(226): Illuminate\Console\Application->resolveCommands(Array)
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Illuminate\Foundation\Console\Kernel->getArtisan()
+#10 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-01-29 22:35:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Down', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(58): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 15:55:06] local.INFO: Envoy ran @ 2016-01-30 15:55:06  
+[2016-01-30 15:55:08] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(74): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:00:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Down', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(79): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:05:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Down', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(81): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:10:04] local.INFO: Envoy ran @ 2016-01-30 16:10:04  
+[2016-01-30 16:10:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:15:04] local.INFO: Envoy ran @ 2016-01-30 16:15:04  
+[2016-01-30 16:15:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:20:03] local.INFO: Envoy ran @ 2016-01-30 16:20:03  
+[2016-01-30 16:20:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:25:05] local.INFO: Envoy ran @ 2016-01-30 16:25:05  
+[2016-01-30 16:25:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:30:04] local.INFO: Envoy ran @ 2016-01-30 16:30:04  
+[2016-01-30 16:30:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:35:07] local.INFO: Envoy ran @ 2016-01-30 16:35:07  
+[2016-01-30 16:35:09] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:40:04] local.INFO: Envoy ran @ 2016-01-30 16:40:04  
+[2016-01-30 16:40:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:45:04] local.INFO: Envoy ran @ 2016-01-30 16:45:04  
+[2016-01-30 16:45:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:50:05] local.INFO: Envoy ran @ 2016-01-30 16:50:05  
+[2016-01-30 16:50:07] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 16:55:05] local.INFO: Envoy ran @ 2016-01-30 16:55:05  
+[2016-01-30 16:55:07] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:00:04] local.INFO: Envoy ran @ 2016-01-30 17:00:04  
+[2016-01-30 17:00:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:05:04] local.INFO: Envoy ran @ 2016-01-30 17:05:04  
+[2016-01-30 17:05:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:10:04] local.INFO: Envoy ran @ 2016-01-30 17:10:04  
+[2016-01-30 17:10:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:15:04] local.INFO: Envoy ran @ 2016-01-30 17:15:04  
+[2016-01-30 17:15:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:20:04] local.INFO: Envoy ran @ 2016-01-30 17:20:04  
+[2016-01-30 17:20:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:25:04] local.INFO: Envoy ran @ 2016-01-30 17:25:04  
+[2016-01-30 17:25:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:30:05] local.INFO: Envoy ran @ 2016-01-30 17:30:05  
+[2016-01-30 17:30:07] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:35:04] local.INFO: Envoy ran @ 2016-01-30 17:35:04  
+[2016-01-30 17:35:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:40:04] local.INFO: Envoy ran @ 2016-01-30 17:40:04  
+[2016-01-30 17:40:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:45:05] local.INFO: Envoy ran @ 2016-01-30 17:45:05  
+[2016-01-30 17:45:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:50:07] local.INFO: Envoy ran @ 2016-01-30 17:50:07  
+[2016-01-30 17:50:08] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 17:55:04] local.INFO: Envoy ran @ 2016-01-30 17:55:04  
+[2016-01-30 17:55:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:00:04] local.INFO: Envoy ran @ 2016-01-30 18:00:03  
+[2016-01-30 18:00:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:05:07] local.INFO: Envoy ran @ 2016-01-30 18:05:07  
+[2016-01-30 18:05:09] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:10:04] local.INFO: Envoy ran @ 2016-01-30 18:10:04  
+[2016-01-30 18:10:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:15:04] local.INFO: Envoy ran @ 2016-01-30 18:15:04  
+[2016-01-30 18:15:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:20:03] local.INFO: Envoy ran @ 2016-01-30 18:20:03  
+[2016-01-30 18:20:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:25:04] local.INFO: Envoy ran @ 2016-01-30 18:25:04  
+[2016-01-30 18:25:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:30:04] local.INFO: Envoy ran @ 2016-01-30 18:30:04  
+[2016-01-30 18:30:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:35:04] local.INFO: Envoy ran @ 2016-01-30 18:35:04  
+[2016-01-30 18:35:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:40:05] local.INFO: Envoy ran @ 2016-01-30 18:40:05  
+[2016-01-30 18:40:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:45:04] local.INFO: Envoy ran @ 2016-01-30 18:45:04  
+[2016-01-30 18:45:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:50:04] local.INFO: Envoy ran @ 2016-01-30 18:50:04  
+[2016-01-30 18:50:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 18:55:04] local.INFO: Envoy ran @ 2016-01-30 18:55:04  
+[2016-01-30 18:55:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 19:00:05] local.INFO: Envoy ran @ 2016-01-30 19:00:05  
+[2016-01-30 19:00:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 19:05:04] local.INFO: Envoy ran @ 2016-01-30 19:05:04  
+[2016-01-30 19:05:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 19:10:04] local.INFO: Envoy ran @ 2016-01-30 19:10:04  
+[2016-01-30 19:10:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 19:15:04] local.INFO: Envoy ran @ 2016-01-30 19:15:04  
+[2016-01-30 19:15:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 19:20:04] local.INFO: Envoy ran @ 2016-01-30 19:20:04  
+[2016-01-30 19:20:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 19:25:04] local.INFO: Envoy ran @ 2016-01-30 19:25:04  
+[2016-01-30 19:25:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-30 19:30:04] local.INFO: Envoy ran @ 2016-01-30 19:30:04  
+[2016-01-30 19:30:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(69): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 15:50:04] local.INFO: Envoy ran @ 2016-01-31 15:50:04  
+[2016-01-31 15:50:07] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(68): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 15:55:04] local.INFO: Envoy ran @ 2016-01-31 15:55:04  
+[2016-01-31 15:55:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(70): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:00:04] local.INFO: Envoy ran @ 2016-01-31 16:00:04  
+[2016-01-31 16:00:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(70): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:05:05] local.INFO: Envoy ran @ 2016-01-31 16:05:04  
+[2016-01-31 16:05:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(70): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:10:05] local.INFO: Envoy ran @ 2016-01-31 16:10:05  
+[2016-01-31 16:10:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(70): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:15:04] local.INFO: Envoy ran @ 2016-01-31 16:15:04  
+[2016-01-31 16:15:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(70): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:20:04] local.INFO: Envoy ran @ 2016-01-31 16:20:04  
+[2016-01-31 16:20:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(70): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:25:04] local.INFO: Envoy ran @ 2016-01-31 16:25:04  
+[2016-01-31 16:25:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(70): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:30:03] local.INFO: Envoy ran @ 2016-01-31 16:30:03  
+[2016-01-31 16:30:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(80): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:35:05] local.INFO: Envoy ran @ 2016-01-31 16:35:05  
+[2016-01-31 16:35:07] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(80): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:40:04] local.INFO: Envoy ran @ 2016-01-31 16:40:04  
+[2016-01-31 16:40:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(80): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:45:06] local.INFO: Envoy ran @ 2016-01-31 16:45:06  
+[2016-01-31 16:45:07] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(80): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:50:04] local.INFO: Envoy ran @ 2016-01-31 16:50:04  
+[2016-01-31 16:50:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(80): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-01-31 16:55:05] local.INFO: Envoy ran @ 2016-01-31 16:55:05  
+[2016-01-31 16:55:06] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(80): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-02-03 06:00:06] local.INFO: Envoy ran @ 2016-02-03 06:00:06  
+[2016-02-03 06:00:09] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(81): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-02-03 06:05:04] local.ERROR: ErrorException: Trying to get property of non-object in /home/vagrant/app/app/Console/Commands/MonitorStatus.php:74
+Stack trace:
+#0 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(74): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', '/home/vagrant/a...', 74, Array)
+#1 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#4 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-02-03 06:10:04] local.INFO: Envoy ran @ 2016-02-03 06:10:04  
+[2016-02-03 06:10:05] local.ERROR: Swift_TransportException: Cannot send message without a sender address in /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:162
+Stack trace:
+#0 /home/vagrant/app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#1 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(386): Swift_Mailer->send(Object(Swift_Message), Array)
+#2 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php(173): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
+#3 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(224): Illuminate\Mail\Mailer->send('Email.Server', Array, Object(Closure))
+#4 /home/vagrant/app/app/Console/Commands/MonitorStatus.php(85): Illuminate\Support\Facades\Facade::__callStatic('send', Array)
+#5 [internal function]: App\Console\Commands\MonitorStatus->handle(Object(Illuminate\Console\Scheduling\Schedule), Object(App\Event), Object(App\Record))
+#6 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /home/vagrant/app/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /home/vagrant/app/vendor/symfony/console/Application.php(787): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /home/vagrant/app/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\MonitorStatus), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/vagrant/app/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/vagrant/app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/vagrant/app/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
